@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>FEEL Personality Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #c9e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .phone-shell {
+      width: 390px;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 430px) {
+      html, body {
+        background: transparent;
+      }
+      .phone-shell {
+        width: 100%;
+        min-height: 100dvh;
+      }
+    }
+
+    .card {
+      width: 340px;
+      min-height: 560px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 24px 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    /* Background image layer */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 28px;
+      z-index: 0;
+    }
+
+    /* Content sits above bg */
+    .card-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 0;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .feel-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 1;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #F6A952 0%, #EAA4A6 36.82%, #BBA1D4 61.9%, #1DCBD6 86.98%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 2.5px;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Spacer to push buttons down */
+    .spacer {
+      flex: 1;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      padding: 14px 32px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.45);
+      color: #333;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.65);
+      transform: scale(1.04);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .credit {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      line-height: 1.6;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-shell">
+    <div class="card">
+      <!-- Background PNG -->
+      <img class="card-bg" src="background_onboarding-3.png" alt="" aria-hidden="true" />
+
+      <div class="card-content">
+        <div class="header">
+          <span class="feel-title">FEEL</span>
+          <span class="subtitle">Personality Quiz</span>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="buttons">
+          <button class="btn">PLAY</button>
+          <button class="btn">ABOUT</button>
+        </div>
+
+        <p class="credit">
+          Created by<br />
+          Mani Atasay and Adrianna De la Rosa
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
